@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALTO — Интернет-магазин</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header id="header"></header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-pills">
+        <span class="hero-pill pill-electronics">Электроника</span>
+        <span class="hero-pill pill-jewelry">Украшения</span>
+        <span class="hero-pill pill-men">Мужское</span>
+        <span class="hero-pill pill-women">Женское</span>
+      </div>
+      <h1 class="hero-heading">Найди то,<br>что ты хотел</h1>
+      <p class="hero-sub">20 товаров в четырёх категориях — электроника, украшения и одежда. Всё в одном месте.</p>
+      <a href="#catalog-anchor" class="btn-hero">Смотреть каталог ↓</a>
+    </div>
+  </section>
+
+  <!-- Каталог -->
+  <main>
+    <span id="catalog-anchor" style="display:block;margin-top:-16px"></span>
+    <div class="catalog-header">
+      <h2>Каталог</h2>
+      <input type="search" id="search-input" placeholder="Поиск по названию…">
+    </div>
+    <div id="category-filter"></div>
+    <div id="catalog"></div>
+  </main>
+
+  <footer id="footer"></footer>
+
+  <script src="js/models.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/catalog.js"></script>
+</body>
+</html>

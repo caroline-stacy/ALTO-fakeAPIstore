@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALTO — Корзина</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header id="header"></header>
+
+  <main>
+    <h2>Корзина</h2>
+    <div id="cart-items" style="margin-top:24px"></div>
+    <div class="cart-summary">
+      <div>
+        <div class="cart-total-label">Итого</div>
+        <div id="cart-total" class="cart-total-amount">$0.00</div>
+      </div>
+      <div class="cart-actions">
+        <button class="btn btn-secondary" onclick="window.location.href='index.html'">← Каталог</button>
+        <button class="btn btn-primary" onclick="checkout()">Оформить заказ</button>
+      </div>
+    </div>
+  </main>
+
+  <footer id="footer"></footer>
+
+  <script src="js/models.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/cart.js"></script>
+  <script>
+    function checkout() {
+      const cart = Cart.load();
+      if (cart.items.length === 0) return;
+      cart.clear(); cart.save(); updateCartIcon();
+      alert('Заказ оформлен! Спасибо за покупку 🎉');
+      window.location.href = 'index.html';
+    }
+  </script>
+</body>
+</html>
